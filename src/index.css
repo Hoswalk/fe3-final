@@ -1,17 +1,25 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body#dark, #dark, #dark.main, footer#dark {
+  background-color: #121212;
+  color: white;
 }
-.favButton{
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
+.favButton {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
@@ -19,30 +27,40 @@ code {
   cursor: pointer;
 }
 
-h1{
+
+h1 {
   text-align: center;
 }
 
-nav{
+
+nav {
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  width: auto;
+  justify-content: space-between;
   padding: 1rem;
 }
 
-a{
+
+a {
   color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
 }
-a:hover{
+
+a:hover {
   color: rgb(136, 136, 136);
-} 
+}
+
+#dark a {
+  color: white;
+}
+
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   padding: 2rem;
   position: relative;
@@ -50,18 +68,26 @@ footer {
   width: 90%;
   height: 40px;
   margin-top: 2rem;
+  width: auto;
 }
 
-footer > img{
+footer > img {
   width: 200px;
   margin: 0;
 }
-footer > p{
+
+footer > div > img {
+  width: 30px;
+  background-color: #000;
+}
+
+footer > p {
   margin: 0;
   padding-top: 0.7rem;
 }
 
-form{
+
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -70,37 +96,43 @@ form{
   margin: 0 auto;
 }
 
-.card{
+form.form1 {
+  padding-top: 40px;
+}
+
+
+.card {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  width: 320px;
+  padding: 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  margin: 0.5rem;
 }
 
-.card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+.card:hover {
+  border-color: rgb(206, 217, 142);
 }
 
-.card-grid{
+.img {
+  width: 200px;
+}
+
+.card-grid {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 90vw;
-  height: auto;
   flex-wrap: wrap;
+  width: 90vw;
   margin: 0 auto;
 }
 
-table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ccc;
 }
 
 td, th {
@@ -113,10 +145,75 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
-  background-color: #12121296;
+
+#light {
+  background-color: #f2f2f2;
+}
+
+
+.main {
+  background-color: #FFFFFF;
+  width: 400px;
+  height: 400px;
+  margin: 7em auto 250px;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+#dark.main {
+  background-color: #121212;
   color: white;
 }
-.dark > a {
-  color: white;
+
+
+.sign {
+  padding-top: 40px;
+  color: #8C55AA;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+
+.un, .pass {
+  width: 76%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin: 20px 0 27px 46px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.un:focus, .pass:focus {
+  border-color: rgba(0, 0, 0, 0.18) !important;
+}
+
+
+.submit {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #150a17, #491353);
+  border: 0;
+  padding: 10px 40px;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0 35%;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+
+.forgot {
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #E1BEE7;
+  padding-top: 15px;
 }
